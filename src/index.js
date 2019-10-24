@@ -1,14 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import * as serviceWorker from './serviceWorker';
-import ToDoList from './list';
+import App from './app';
 
-const list = []; // ここでtodoの情報を補完するための「配列」というものを宣言しているよ
-
-ReactDOM.render( // reactの機能を使って()内のものを画面上に表示させているよ
-    <ToDoList toDoList={list}/>, // 表示させるものとして、list.jsxで書いた「reactコンポーネント」というものを指定してるよ
-    　　　　　　　　　　　　　　　　// 更に、toDoList={list}という部分で、このreactコンポーネントにlistを渡しているよ
-    document.getElementById('root')
+ReactDOM.render( // reactの機能を使って()内のものを画面上に表示させています。
+    <App/>, // 表示させるものとして、app.jsxに書かれているApp componentを指定しています
+    document.getElementById('root') // public/index.htmlにある <div id="root"></div> という記述が関係しています
 );
 
-serviceWorker.unregister();
+
+
